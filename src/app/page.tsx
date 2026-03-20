@@ -12,24 +12,27 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-28 pb-20 relative overflow-hidden">
-        {/* Gradient blobs */}
-        <div className="absolute -top-[15%] -left-[10%] w-[600px] h-[600px] rounded-full blur-[90px] animate-[float1_8s_ease-in-out_infinite]"
-          style={{ background: "radial-gradient(circle, rgba(255,107,53,0.1) 0%, transparent 70%)" }} />
-        <div className="absolute -bottom-[10%] -right-[10%] w-[500px] h-[500px] rounded-full blur-[90px] animate-[float2_10s_ease-in-out_infinite]"
-          style={{ background: "radial-gradient(circle, rgba(232,67,147,0.08) 0%, transparent 70%)" }} />
-        <div className="absolute top-[30%] right-[15%] w-[400px] h-[400px] rounded-full blur-[90px] animate-[float3_12s_ease-in-out_infinite]"
-          style={{ background: "radial-gradient(circle, rgba(247,201,72,0.1) 0%, transparent 70%)" }} />
+        {/* Banner background */}
+        <Image
+          src="/evisionBanner.jpg"
+          alt=""
+          fill
+          priority
+          className="object-cover object-center"
+        />
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 bg-[#0d0d2b]/40" />
 
-        <div className="animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.2s_both]">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-brand-orange/[0.08] border border-brand-orange/[0.18] mb-6">
-            <span className="text-brand-deep-orange text-[13px] font-bold uppercase tracking-widest">
+        <div className="relative z-10 animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.2s_both]">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-white/[0.1] border border-white/[0.2] mb-6 backdrop-blur-sm">
+            <span className="text-white text-[13px] font-bold uppercase tracking-widest">
               Apps that matter
             </span>
           </div>
         </div>
 
         <h1
-          className="text-[clamp(48px,8vw,96px)] leading-[1.05] text-brand-navy mb-6 max-w-[900px] animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.4s_both]"
+          className="relative z-10 text-[clamp(48px,8vw,96px)] leading-[1.05] text-white mb-6 max-w-[900px] animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.4s_both]"
           style={{ fontFamily: "'Dela Gothic One', cursive" }}
         >
           We build apps
@@ -39,12 +42,12 @@ export default function Home() {
           </span>
         </h1>
 
-        <p className="text-[clamp(16px,2vw,20px)] text-brand-navy/50 max-w-[560px] leading-7 mb-12 animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.6s_both]">
+        <p className="relative z-10 text-[clamp(16px,2vw,20px)] text-white/70 max-w-[560px] leading-7 mb-12 animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.6s_both]">
           Evision9 crafts thoughtful, beautiful apps that solve real problems.
           From giving away household items to tools you&apos;ll use every day.
         </p>
 
-        <div className="flex gap-4 animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.8s_both]">
+        <div className="relative z-10 flex gap-4 animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.8s_both]">
           <a
             href="#products"
             className="px-8 py-3.5 rounded-xl text-white font-bold text-[15px] no-underline transition-all hover:-translate-y-0.5 hover:shadow-xl"
@@ -57,7 +60,7 @@ export default function Home() {
           </a>
           <Link
             href="/about"
-            className="px-8 py-3.5 rounded-xl text-brand-navy font-semibold text-[15px] no-underline bg-brand-navy/[0.04] border border-brand-navy/10 hover:bg-brand-navy/[0.07] hover:border-brand-navy/[0.18] transition-all"
+            className="px-8 py-3.5 rounded-xl text-white/90 font-semibold text-[15px] no-underline bg-white/[0.08] border border-white/20 hover:bg-white/[0.15] hover:border-white/30 transition-all backdrop-blur-sm"
           >
             About Us
           </Link>
