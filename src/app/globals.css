@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-orange: #FF6B35;
+  --brand-deep-orange: #E8430E;
+  --brand-gold: #F7C948;
+  --brand-magenta: #E84393;
+  --brand-blue: #0984E3;
+  --brand-navy: #1A1A2E;
+}
+
+::selection {
+  background: rgba(255, 107, 53, 0.15);
+  color: #1A1A2E;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prose styles for blog posts */
+.prose-blog {
+  @apply text-brand-navy/70 leading-relaxed;
+}
+.prose-blog h1 {
+  @apply font-display text-4xl text-brand-navy mb-4 mt-12;
+}
+.prose-blog h2 {
+  @apply font-display text-2xl text-brand-navy mb-3 mt-10;
+}
+.prose-blog h3 {
+  @apply font-display text-xl text-brand-navy mb-2 mt-8;
+}
+.prose-blog p {
+  @apply mb-6 text-base leading-7;
+}
+.prose-blog a {
+  @apply text-brand-deep-orange underline underline-offset-2 hover:text-brand-orange transition-colors;
+}
+.prose-blog ul, .prose-blog ol {
+  @apply mb-6 pl-6;
+}
+.prose-blog li {
+  @apply mb-2;
+}
+.prose-blog code {
+  @apply bg-gray-100 px-1.5 py-0.5 rounded text-sm text-brand-navy;
+}
+.prose-blog pre {
+  @apply bg-gray-50 border border-gray-200 rounded-xl p-4 mb-6 overflow-x-auto;
+}
+.prose-blog pre code {
+  @apply bg-transparent px-0 py-0;
+}
+.prose-blog blockquote {
+  @apply border-l-4 border-brand-orange/30 pl-4 italic text-brand-navy/50 mb-6;
+}
+.prose-blog img {
+  @apply rounded-xl my-8;
+}
