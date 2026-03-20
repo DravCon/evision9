@@ -32,7 +32,9 @@ export default function Navbar() {
           E9
         </div>
         <span
-          className="text-brand-navy text-lg tracking-tight"
+          className={`text-lg tracking-tight transition-colors ${
+            scrolled ? "text-brand-navy" : "text-white"
+          }`}
           style={{ fontFamily: "'Dela Gothic One', cursive" }}
         >
           Evision9
@@ -44,7 +46,11 @@ export default function Navbar() {
           <Link
             key={link.label}
             href={link.href}
-            className="text-brand-navy/50 no-underline text-sm font-semibold uppercase tracking-wide hover:text-brand-navy transition-colors"
+            className={`no-underline text-sm font-semibold uppercase tracking-wide transition-colors ${
+              scrolled
+                ? "text-brand-navy/50 hover:text-brand-navy"
+                : "text-white/70 hover:text-white"
+            }`}
           >
             {link.label}
           </Link>
