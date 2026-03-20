@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import AppCard from "@/components/AppCard";
 import { apps } from "@/lib/data";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -85,6 +86,111 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Our Story */}
+      <section id="our-story" className="px-6 pb-28 max-w-5xl mx-auto">
+        <div className="text-center mb-16">
+          <h2
+            className="text-[clamp(32px,5vw,48px)] text-brand-navy mb-4"
+            style={{ fontFamily: "'Dela Gothic One', cursive" }}
+          >
+            Our Story
+          </h2>
+          <p className="text-[17px] text-brand-navy/45 max-w-[480px] mx-auto leading-7">
+            A dream that started in 1998, paused, and found its moment again.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Business card */}
+          <div className="relative">
+            <div className="rounded-2xl overflow-hidden shadow-xl border border-black/[0.06] rotate-[-1deg] hover:rotate-0 transition-transform duration-500">
+              <Image
+                src="/evision9-card.jpg"
+                alt="Original Evision9 business card from 1998"
+                width={600}
+                height={380}
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="text-center mt-4">
+              <span className="text-[13px] text-brand-navy/30 font-medium tracking-wide">
+                The original business card, circa 1998
+              </span>
+            </div>
+          </div>
+
+          {/* Story text */}
+          <div className="space-y-5 text-[16.5px] text-brand-navy/60 leading-8">
+            <p>
+              It was 1998. The web was young, and so were we. Most businesses
+              didn&apos;t have a website. Many didn&apos;t see why they&apos;d need one.
+              But we saw something bigger: a paradigm shift in how people connect,
+              create, and tell their stories.
+            </p>
+            <p>
+              Evision9 was born in that moment. We helped businesses find their
+              digital identity, designing websites, building multimedia content,
+              and making the internet feel less like a mystery and more like an
+              opportunity. One client at a time, we turned skeptics into believers.
+            </p>
+            <p>
+              Then life happened. The startup wound down, but the dream never
+              really did.
+            </p>
+            <p>
+              Now, over two decades later, we&apos;re watching it happen again.
+              Generative AI isn&apos;t just a new tool. It&apos;s a new language. And just
+              like the early web, most people sense its power but aren&apos;t sure
+              what to do with it.
+            </p>
+            <p className="text-brand-navy/70 font-medium">
+              That&apos;s where we come in. Again.
+            </p>
+            <p>
+              Evision9 is back. Not as a nostalgia project, but because the world
+              needs the same thing it needed in 1998: thoughtful people who can
+              bridge the gap between what&apos;s possible and what&apos;s practical.
+              We&apos;re building apps that bring the promise of AI into everyday
+              life, with the same belief we started with.
+            </p>
+            <p
+              className="text-lg text-brand-deep-orange font-semibold italic"
+            >
+              That technology should feel like a dream made real.
+            </p>
+          </div>
+        </div>
+
+        {/* Timeline */}
+        <div className="flex justify-center gap-16 mt-16 px-8 py-8 rounded-2xl bg-gray-50 border border-black/[0.04]">
+          <div className="text-center">
+            <div
+              className="text-3xl bg-gradient-to-r from-brand-orange to-brand-magenta bg-clip-text text-transparent"
+              style={{ fontFamily: "'Dela Gothic One', cursive" }}
+            >
+              1998
+            </div>
+            <div className="text-[13px] text-brand-navy/35 uppercase tracking-wider font-semibold mt-1">
+              First Dream
+            </div>
+          </div>
+          <div className="flex items-center">
+            <div className="w-24 h-[2px] bg-gradient-to-r from-brand-orange/30 to-brand-magenta/30 rounded-full" />
+          </div>
+          <div className="text-center">
+            <div
+              className="text-3xl bg-gradient-to-r from-brand-magenta to-brand-blue bg-clip-text text-transparent"
+              style={{ fontFamily: "'Dela Gothic One', cursive" }}
+            >
+              2025
+            </div>
+            <div className="text-[13px] text-brand-navy/35 uppercase tracking-wider font-semibold mt-1">
+              Same Dream, New Tools
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Preview */}
       <section className="px-6 pb-28 max-w-3xl mx-auto text-center">
         <h2
@@ -105,7 +211,7 @@ export default function Home() {
         <div className="inline-flex gap-12 px-12 py-9 rounded-2xl bg-gray-50 border border-black/[0.04]">
           {[
             { num: "2+", label: "Apps" },
-            { num: "2025", label: "Founded" },
+            { num: "1998", label: "Founded" },
             { num: "∞", label: "Curiosity" },
           ].map((stat) => (
             <div key={stat.label}>

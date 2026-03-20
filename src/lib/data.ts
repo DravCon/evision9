@@ -66,6 +66,7 @@ export const apps: AppInfo[] = [
 
 export const navLinks = [
   { label: "Products", href: "/#products" },
+  { label: "Our Story", href: "/#our-story" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
