@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Evision9 is an independent app studio based in India, building thoughtful iOS apps that solve real problems.",
+    "Evision9 is an independent app studio based in India, building thoughtful iPhone and Android apps that solve real problems.",
 };
 
 export default function AboutPage() {
@@ -38,7 +38,7 @@ export default function AboutPage() {
           </p>
 
           <p>
-            We craft iOS apps that are thoughtful, well-designed, and solve
+            We craft iPhone and Android apps that are thoughtful, well-designed, and solve
             problems people actually have. No bloat. No dark patterns. No
             tracking. Just tools that feel right.
           </p>
@@ -102,7 +102,7 @@ export default function AboutPage() {
         <div className="mt-16 flex justify-center">
           <div className="inline-flex gap-12 px-12 py-9 rounded-2xl bg-gray-50 border border-black/[0.04]">
             {[
-              { num: "3+", label: "Apps" },
+              { num: "4+", label: "Apps" },
               { num: "2025", label: "Founded" },
               { num: "India", label: "Based In" },
               { num: "∞", label: "Curiosity" },

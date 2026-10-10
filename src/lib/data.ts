@@ -10,6 +10,7 @@ export interface AppInfo {
   iconImage?: string;
   status: "Available" | "Coming Soon" | "In Development" | "Planned";
   features: string[];
+  disclaimer?: string;
   appStoreUrl?: string;
 }
 
@@ -82,6 +83,31 @@ export const apps: AppInfo[] = [
       "Outfit history calendar that steers you away from repeats",
       "Batch add: photograph several pieces in a single shot",
     ],
+  },
+  {
+    slug: "sanket",
+    name: "Sanket",
+    tagline: "A signal to act, not a verdict.",
+    description:
+      "An oral cancer risk check for Android, built for India. Take three guided photos of the inside of the mouth and get a clear, plain-language signal on whether to see a doctor.",
+    longDescription:
+      "Oral cancer is one of the most common cancers in India, and most cases are found late, even though many early warning signs are visible inside the mouth. Sanket, Hindi for \"signal\", helps people notice them sooner. The app walks you through three photos, of the left cheek, the right cheek, and the tongue, and checks each one for blur and lighting as you take it. AI then reviews the photos and returns one of three plain-language signals: low risk, needs attention, or consult a doctor urgently, along with what it noticed and what to do next. A family member can run the check for someone else using the back camera, and the result can be shared as an image card to show a doctor. Coming next: Hindi, a finder for nearby hospitals and clinics, and one-tap deletion of all your data.",
+    color: "#1565C0",
+    gradient: "linear-gradient(135deg, #1565C0, #42A5F5)",
+    icon: "🩺",
+    status: "In Development",
+    features: [
+      "A clear signal: low risk, needs attention, or consult urgently",
+      "Three guided photos: left cheek, right cheek, and tongue",
+      "Live checks for blur, lighting, and framing as you shoot",
+      "Plain-language observations and what to do next",
+      "Front or back camera, so family can check someone else",
+      "Shareable result card to show a doctor",
+      "Past screenings saved with their full results",
+      "Phone number sign-in, with consent asked up front",
+    ],
+    disclaimer:
+      "Sanket is a health information tool, not a diagnostic device. It does not diagnose cancer and does not replace an examination by a doctor or dentist.",
   },
 ];
 
