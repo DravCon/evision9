@@ -30,8 +30,8 @@ export default function ContactPage() {
             {
               icon: "📧",
               label: "Email",
-              value: "hello@evision9.com",
-              href: "mailto:hello@evision9.com",
+              value: "evision9studio@gmail.com",
+              href: "mailto:evision9studio@gmail.com",
               color: "#FF6B35",
             },
             {
@@ -80,7 +80,14 @@ export default function ContactPage() {
               Support for our apps?
             </span>{" "}
             If you&apos;re having an issue with PassIt or any of our apps, email
-            us and we&apos;ll get back to you within 24 hours.
+            us at{" "}
+            <a
+              href="mailto:evision9studio@gmail.com"
+              className="font-semibold text-brand-deep-orange hover:underline"
+            >
+              evision9studio@gmail.com
+            </a>{" "}
+            and we&apos;ll get back to you within 24 hours.
           </p>
         </div>
       </section>
