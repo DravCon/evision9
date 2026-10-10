@@ -1,14 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { navLinks } from "@/lib/data";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  // Only the homepage has a dark hero behind the nav; other pages start on white.
+  const overDarkHero = usePathname() === "/" && !scrolled;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -33,7 +37,7 @@ export default function Navbar() {
         </div>
         <span
           className={`text-lg tracking-tight transition-colors ${
-            scrolled ? "text-brand-navy" : "text-white"
+            overDarkHero ? "text-white" : "text-brand-navy"
           }`}
           style={{ fontFamily: "'Dela Gothic One', cursive" }}
         >
@@ -47,9 +51,9 @@ export default function Navbar() {
             key={link.label}
             href={link.href}
             className={`no-underline text-sm font-semibold uppercase tracking-wide transition-colors ${
-              scrolled
-                ? "text-brand-navy/50 hover:text-brand-navy"
-                : "text-white/70 hover:text-white"
+              overDarkHero
+                ? "text-white/70 hover:text-white"
+                : "text-brand-navy/50 hover:text-brand-navy"
             }`}
           >
             {link.label}
