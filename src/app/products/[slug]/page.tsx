@@ -101,6 +101,17 @@ export default function ProductPage({ params }: Props) {
           {app.longDescription}
         </p>
 
+        {app.disclaimer && (
+          <div className="mb-12 p-6 rounded-2xl bg-gray-50 border border-black/[0.06]">
+            <p className="text-xs font-bold uppercase tracking-wider text-brand-navy/40 mb-2">
+              Important
+            </p>
+            <p className="text-[15px] text-brand-navy/65 leading-7">
+              {app.disclaimer}
+            </p>
+          </div>
+        )}
+
         {/* Features */}
         <div className="mb-12">
           <h2
