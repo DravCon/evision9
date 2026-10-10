@@ -44,8 +44,8 @@ export default function ContactPage() {
             {
               icon: "💻",
               label: "GitHub",
-              value: "github.com/evision9",
-              href: "https://github.com/evision9",
+              value: "github.com/DravCon",
+              href: "https://github.com/DravCon",
               color: "#1A1A2E",
             },
           ].map((contact) => (
