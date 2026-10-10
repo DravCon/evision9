@@ -102,7 +102,7 @@ export default function AboutPage() {
         <div className="mt-16 flex justify-center">
           <div className="inline-flex gap-12 px-12 py-9 rounded-2xl bg-gray-50 border border-black/[0.04]">
             {[
-              { num: "2+", label: "Apps" },
+              { num: "3+", label: "Apps" },
               { num: "2025", label: "Founded" },
               { num: "India", label: "Based In" },
               { num: "∞", label: "Curiosity" },
