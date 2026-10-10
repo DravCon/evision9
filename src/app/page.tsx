@@ -44,7 +44,7 @@ export default function Home() {
 
         <p className="relative z-10 text-[clamp(16px,2vw,20px)] text-white/70 max-w-[560px] leading-7 mb-12 animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.6s_both]">
           Evision9 crafts thoughtful, beautiful apps that solve real problems.
-          From giving away household items to tools you&apos;ll use every day.
+          From giving away household items to a private diary you can talk to.
         </p>
 
         <div className="relative z-10 flex gap-4 animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.8s_both]">

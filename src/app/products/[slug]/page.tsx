@@ -2,7 +2,9 @@ import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { apps } from "@/lib/data";
+import { getAllPosts } from "@/lib/blog";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 interface Props {
@@ -26,6 +28,8 @@ export default function ProductPage({ params }: Props) {
   const app = apps.find((a) => a.slug === params.slug);
   if (!app) notFound();
 
+  const updates = getAllPosts().filter((post) => post.tags.includes(app.slug));
+
   return (
     <main>
       <Navbar />
@@ -46,15 +50,27 @@ export default function ProductPage({ params }: Props) {
 
         {/* Hero */}
         <div className="flex items-start gap-6 mb-8">
-          <div
-            className="w-20 h-20 rounded-2xl flex items-center justify-center text-4xl shrink-0"
-            style={{
-              background: app.gradient,
-              boxShadow: `0 12px 32px ${app.color}20`,
-            }}
-          >
-            {app.icon}
-          </div>
+          {app.iconImage ? (
+            <Image
+              src={app.iconImage}
+              alt={`${app.name} app icon`}
+              width={80}
+              height={80}
+              priority
+              className="w-20 h-20 rounded-2xl shrink-0"
+              style={{ boxShadow: `0 12px 32px ${app.color}20` }}
+            />
+          ) : (
+            <div
+              className="w-20 h-20 rounded-2xl flex items-center justify-center text-4xl shrink-0"
+              style={{
+                background: app.gradient,
+                boxShadow: `0 12px 32px ${app.color}20`,
+              }}
+            >
+              {app.icon}
+            </div>
+          )}
           <div>
             <div className="flex items-center gap-3 mb-2">
               <h1
@@ -110,6 +126,46 @@ export default function ProductPage({ params }: Props) {
             ))}
           </div>
         </div>
+
+        {/* Updates (blog posts tagged with this app's slug) */}
+        {updates.length > 0 && (
+          <div className="mb-12">
+            <h2
+              className="text-2xl text-brand-navy mb-6"
+              style={{ fontFamily: "'Dela Gothic One', cursive" }}
+            >
+              Updates
+            </h2>
+            <div className="flex flex-col gap-3">
+              {updates.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="no-underline group block p-5 rounded-xl bg-gray-50 border border-black/[0.04] hover:bg-white hover:border-black/[0.08] transition-all"
+                >
+                  <time className="text-sm text-brand-navy/35 font-medium">
+                    {new Date(post.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
+                  <h3
+                    className="text-lg text-brand-navy mt-1 mb-1 transition-colors"
+                    style={{ fontFamily: "'Dela Gothic One', cursive" }}
+                  >
+                    <span className="group-hover:underline underline-offset-4">
+                      {post.title}
+                    </span>
+                  </h3>
+                  <p className="text-[15px] text-brand-navy/50 leading-6">
+                    {post.excerpt}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* App Store Link */}
         {app.appStoreUrl ? (

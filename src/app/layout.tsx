@@ -7,8 +7,8 @@ export const metadata: Metadata = {
     template: "%s | Evision9",
   },
   description:
-    "Evision9 crafts thoughtful, beautiful iOS apps that solve real problems. From giving away household items to tools you'll use every day.",
-  keywords: ["iOS apps", "mobile apps", "PassIt", "Evision9", "indie developer"],
+    "Evision9 crafts thoughtful, beautiful iOS apps that solve real problems. From giving away household items to a private diary you can talk to.",
+  keywords: ["iOS apps", "mobile apps", "PassIt", "Me", "voice diary", "Evision9", "indie developer"],
   authors: [{ name: "Evision9" }],
   openGraph: {
     title: "Evision9 — Apps People Love",

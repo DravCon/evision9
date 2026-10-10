@@ -7,6 +7,7 @@ export interface AppInfo {
   color: string;
   gradient: string;
   icon: string;
+  iconImage?: string;
   status: "Available" | "Coming Soon" | "In Development" | "Planned";
   features: string[];
   appStoreUrl?: string;
@@ -35,18 +36,28 @@ export const apps: AppInfo[] = [
     ],
   },
   {
-    slug: "app-2",
-    name: "App 2",
-    tagline: "Something amazing is brewing.",
+    slug: "me",
+    name: "Me",
+    tagline: "Say it as it is.",
     description:
-      "Details coming soon. We're working on something that will make your daily life a little more delightful.",
+      "A voice-first private diary for iPhone. Just talk, and Me turns your words into diary entries, activities, tasks, and ideas, saved only after you review them.",
     longDescription:
-      "We're working on something special. Stay tuned for an app that will bring a little more delight to your daily routine.",
-    color: "#6C3FA0",
-    gradient: "linear-gradient(135deg, #7B5EA7, #E84393)",
-    icon: "✨",
+      "Me is a private space for noticing and remembering your life as it happens. Talk for as long as you like: your words are transcribed on your iPhone, and audio is never recorded or kept. Me's AI then sorts what you said into clear, editable proposals, such as an activity and how long it took, a feeling, a task with a deadline, or a passing idea. Nothing enters your diary until you review it and tap save. Your diary syncs through your own private iCloud, so there's no account to create. You can search it on your device, see where your time goes, and ask grounded questions about your day or week, with every answer linked back to your own entries.",
+    color: "#D65343",
+    gradient: "linear-gradient(135deg, #37304F, #D65343)",
+    icon: "🎙️",
+    iconImage: "/apps/me-icon.png",
     status: "In Development",
-    features: ["Feature one", "Feature two", "Feature three"],
+    features: [
+      "Speak freely, transcribed on your iPhone, no audio ever stored",
+      "AI turns one long ramble into separate, editable entries",
+      "Nothing is saved until you review and confirm",
+      "Capture from anywhere: Siri, Action Button, widgets, Control Center",
+      "Unsaved words survive interruptions, cancels, and relaunches",
+      "Diary, activity insights, and a workbench for tasks and ideas",
+      "Private iCloud sync with on-device search",
+      "AI routed only to providers that don't retain or train on your words",
+    ],
   },
   {
     slug: "app-3",

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import type { AppInfo } from "@/lib/data";
 
 export default function AppCard({ app }: { app: AppInfo }) {
@@ -10,15 +11,26 @@ export default function AppCard({ app }: { app: AppInfo }) {
         className="bg-gray-50 group-hover:bg-white rounded-3xl p-10 border border-black/[0.04] group-hover:border-black/[0.08] transition-all duration-400 ease-out group-hover:-translate-y-1 group-hover:shadow-lg cursor-pointer relative overflow-hidden"
       >
         <div className="flex justify-between items-start mb-6">
-          <div
-            className="w-16 h-16 rounded-[18px] flex items-center justify-center text-3xl"
-            style={{
-              background: app.gradient,
-              boxShadow: `0 8px 24px ${app.color}20`,
-            }}
-          >
-            {app.icon}
-          </div>
+          {app.iconImage ? (
+            <Image
+              src={app.iconImage}
+              alt={`${app.name} app icon`}
+              width={64}
+              height={64}
+              className="w-16 h-16 rounded-[18px]"
+              style={{ boxShadow: `0 8px 24px ${app.color}20` }}
+            />
+          ) : (
+            <div
+              className="w-16 h-16 rounded-[18px] flex items-center justify-center text-3xl"
+              style={{
+                background: app.gradient,
+                boxShadow: `0 8px 24px ${app.color}20`,
+              }}
+            >
+              {app.icon}
+            </div>
+          )}
           <span
             className="px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide"
             style={{
