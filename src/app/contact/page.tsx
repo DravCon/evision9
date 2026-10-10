@@ -35,13 +35,6 @@ export default function ContactPage() {
               color: "#FF6B35",
             },
             {
-              icon: "🐦",
-              label: "Twitter / X",
-              value: "@evision9",
-              href: "https://twitter.com/evision9",
-              color: "#0984E3",
-            },
-            {
               icon: "💻",
               label: "GitHub",
               value: "github.com/DravCon",
