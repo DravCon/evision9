@@ -25,4 +25,4 @@ If that sounds like the kind of software you'd enjoy, stick around. This blog is
 
 ## Stay tuned
 
-Follow us on Twitter or check back here for updates. We're just getting started, and the best is yet to come.
+Check back here for updates, or [get in touch](/contact). We're just getting started, and the best is yet to come.
