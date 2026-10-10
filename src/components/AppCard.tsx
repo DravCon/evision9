@@ -6,9 +6,9 @@ import type { AppInfo } from "@/lib/data";
 
 export default function AppCard({ app }: { app: AppInfo }) {
   return (
-    <Link href={`/products/${app.slug}`} className="no-underline group">
+    <Link href={`/products/${app.slug}`} className="no-underline group block h-full">
       <div
-        className="bg-gray-50 group-hover:bg-white rounded-3xl p-10 border border-black/[0.04] group-hover:border-black/[0.08] transition-all duration-400 ease-out group-hover:-translate-y-1 group-hover:shadow-lg cursor-pointer relative overflow-hidden"
+        className="h-full flex flex-col bg-gray-50 group-hover:bg-white rounded-3xl p-10 border border-black/[0.04] group-hover:border-black/[0.08] transition-all duration-400 ease-out group-hover:-translate-y-1 group-hover:shadow-lg cursor-pointer relative overflow-hidden"
       >
         <div className="flex justify-between items-start mb-6">
           {app.iconImage ? (
@@ -56,7 +56,7 @@ export default function AppCard({ app }: { app: AppInfo }) {
           {app.description}
         </p>
 
-        <div className="flex flex-col gap-2">
+        <div className="mt-auto flex flex-col gap-2">
           {app.features.slice(0, 3).map((f, i) => (
             <div key={i} className="flex items-center gap-2.5">
               <div

@@ -60,18 +60,28 @@ export const apps: AppInfo[] = [
     ],
   },
   {
-    slug: "app-3",
-    name: "App 3",
-    tagline: "Watch this space.",
+    slug: "stylemate",
+    name: "StyleMate",
+    tagline: "Your wardrobe, styled.",
     description:
-      "Our next big idea is taking shape. Stay tuned for something truly special.",
+      "An AI stylist for the clothes you already own. Photograph your wardrobe once, pick one piece each morning, and StyleMate builds three complete outfits around it.",
     longDescription:
-      "Our next big idea is taking shape. We believe in building fewer, better apps — and this one is worth the wait.",
-    color: "#0670C4",
-    gradient: "linear-gradient(135deg, #0984E3, #00CEC9)",
-    icon: "🚀",
-    status: "Planned",
-    features: ["Feature one", "Feature two", "Feature three"],
+      "StyleMate is a personal stylist that works only with what's already in your closet. Photograph each piece once: the background is removed on your iPhone, and AI tags its category, colors, pattern, formality, and season for you. Each morning, choose the piece you want to wear, whether it's a favorite jacket or a new pair of shoes, and StyleMate suggests three complete outfits built around it, each with a short note on why it works. Set the occasion, from casual to formal, and rate each suggestion so it learns your taste over time. Log what you wear, and StyleMate remembers, so the same look doesn't come back too soon.",
+    color: "#C2654A",
+    gradient: "linear-gradient(135deg, #C2654A, #B85439)",
+    icon: "👗",
+    iconImage: "/apps/stylemate-icon.png",
+    status: "In Development",
+    features: [
+      "Pick one piece, get three complete outfits with reasons",
+      "Snap a piece once, background removed on your iPhone",
+      "AI tags category, colors, pattern, formality, and season",
+      "Occasions from casual and work to date night and formal",
+      "A short style quiz tunes suggestions from day one",
+      "Thumbs up or down, and it learns what you like",
+      "Outfit history calendar that steers you away from repeats",
+      "Batch add: photograph several pieces in a single shot",
+    ],
   },
 ];
 

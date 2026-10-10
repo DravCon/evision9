@@ -44,7 +44,8 @@ export default function Home() {
 
         <p className="relative z-10 text-[clamp(16px,2vw,20px)] text-white/70 max-w-[560px] leading-7 mb-12 animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.6s_both]">
           Evision9 crafts thoughtful, beautiful apps that solve real problems.
-          From giving away household items to a private diary you can talk to.
+          From giving away household items to styling the clothes you already
+          own and a private diary you can talk to.
         </p>
 
         <div className="relative z-10 flex gap-4 animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.8s_both]">
@@ -82,7 +83,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-6">
           {apps.map((app) => (
             <AppCard key={app.slug} app={app} />
           ))}
@@ -213,7 +214,7 @@ export default function Home() {
 
         <div className="inline-flex gap-12 px-12 py-9 rounded-2xl bg-gray-50 border border-black/[0.04]">
           {[
-            { num: "2+", label: "Apps" },
+            { num: "3+", label: "Apps" },
             { num: "1998", label: "Founded" },
             { num: "∞", label: "Curiosity" },
           ].map((stat) => (
