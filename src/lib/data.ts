@@ -8,10 +8,11 @@ export interface AppInfo {
   gradient: string;
   icon: string;
   iconImage?: string;
-  status: "Available" | "Coming Soon" | "In Development" | "Planned";
+  status: "Live" | "Available" | "Coming Soon" | "In Development" | "Planned";
   features: string[];
   disclaimer?: string;
   appStoreUrl?: string;
+  webUrl?: string;
 }
 
 export const apps: AppInfo[] = [
@@ -108,6 +109,30 @@ export const apps: AppInfo[] = [
     ],
     disclaimer:
       "Sanket is a health information tool, not a diagnostic device. It does not diagnose cancer and does not replace an examination by a doctor or dentist.",
+  },
+  {
+    slug: "watch-corner",
+    name: "Watch Corner",
+    tagline: "Good stories. Thoughtful choices.",
+    description:
+      "A parent-guided movie and series library for kids in India. Children browse what's new and trending; only titles a parent has reviewed and approved ever reach their screen.",
+    longDescription:
+      "Watch Corner helps a parent and a child discover movies and series together, without handing the choice to an algorithm. Each month's releases and this week's trending titles are pulled in with their age ratings, IMDb scores, and where to watch them in India, whether on a subscription, free with ads, or to rent or buy. Nothing appears in the child's library until a parent has opened the title on a separate, passcode-protected review desk, written a short note, and approved it. Age certificates are shown as evidence, never treated as automatic permission, and ratings or availability are never invented when the data is missing. Your child browses posters, filters by genre, service, and format, and saves a watchlist, with no viewing history or personal details collected.",
+    color: "#18573E",
+    gradient: "linear-gradient(135deg, #18573E, #7FCFAA)",
+    icon: "🎬",
+    status: "Live",
+    webUrl: "https://advita-watch-corner.web.app",
+    features: [
+      "Only parent-approved titles reach the child's library",
+      "Monthly releases and weekly trending, rated for their age",
+      "IMDb ratings and India streaming options for every title",
+      "Clearly separates subscription, free, rent, and buy",
+      "Search and filter by genre, streaming service, and format",
+      "Separate parent review desk with notes and block controls",
+      "Shared watchlist for titles your child wants to see",
+      "No viewing history or child personal data collected",
+    ],
   },
 ];
 

@@ -43,9 +43,10 @@ export default function Home() {
         </h1>
 
         <p className="relative z-10 text-[clamp(16px,2vw,20px)] text-white/70 max-w-[560px] leading-7 mb-12 animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.6s_both]">
-          Evision9 crafts thoughtful, beautiful apps for iPhone and Android:
-          for giving things away, styling your wardrobe, keeping a diary you can
-          talk to, and checking for early signs of oral cancer.
+          Evision9 crafts thoughtful, beautiful apps for iPhone, Android, and
+          the web: for giving things away, styling your wardrobe, keeping a
+          diary you can talk to, checking for early signs of oral cancer, and
+          choosing what kids watch.
         </p>
 
         <div className="relative z-10 flex gap-4 animate-[fadeUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.8s_both]">

@@ -192,6 +192,19 @@ export default function ProductPage({ params }: Props) {
           >
             Download on the App Store
           </a>
+        ) : app.webUrl ? (
+          <a
+            href={app.webUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-white font-bold text-[15px] no-underline transition-all hover:-translate-y-0.5"
+            style={{
+              background: app.gradient,
+              boxShadow: `0 4px 24px ${app.color}25`,
+            }}
+          >
+            Open {app.name} ↗
+          </a>
         ) : (
           <div className="p-6 rounded-2xl bg-gray-50 border border-black/[0.04] text-center">
             <p className="text-brand-navy/40 text-sm">
